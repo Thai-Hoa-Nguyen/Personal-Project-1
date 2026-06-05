@@ -1,13 +1,21 @@
 import json
 
 inventory = {}
+#User Story
+#I want owner can login to see if they have account or no
+#                                                => yes -> ask username & password
+#                                                => no -> ask enter username & passwords
+#                                                       => it will save username & passowds so that they can login and check later
+#if yes, they can review their inventory, they can either choose to edit inventory (add/remove/change price)
+#after edit they can hit save and review inventory.
 
 def owner():
     # Owner
     #{"Product Name": Price}
     #{"Shoes": 1000, "Shirt": 500}
-    #login system for owner
     
+
+
     while True:
         product_name = input("Enter Product Name: ")
         product_price = int(input("Enter Product Price: "))
