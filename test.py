@@ -27,6 +27,8 @@ if not os.path.exists(FILE_NAME):
         json.dump([], file)
 
 #This is for owner sign up
+#User story
+#when owner sign up, if the usesname already exist, display error and ask owner to enter different username
 def ownerSignUp():
     print("---NEW OWNER SIGN UP---")
     owner_usernames = input("Please Enter New Ownername: ")
@@ -47,6 +49,8 @@ def ownerSignUp():
 
     print("Sign Up Successfull!")
 
+
+
 #this is for people who already has account
 #Figuring out how to check owner if they already has account -> show you are here or pass
 #                                if they don't have account -> you try to pivot they to sign up page
@@ -55,6 +59,7 @@ def ownerSignIn():
     user_usernames = input("Please Enter Ownername: ")
     owner_passwords = input("Please Enter Passwords: ")
 
+#Menu for owner
 while True:
     if user_input == "1":
         ownerSignIn()
