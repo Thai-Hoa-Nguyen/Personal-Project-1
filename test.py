@@ -29,26 +29,31 @@ if not os.path.exists(FILE_NAME):
 #This is for owner sign up
 #User story
 #when owner sign up, if the usesname already exist, display error and ask owner to enter different username
+
 def ownerSignUp():
-    print("---NEW OWNER SIGN UP---")
-    owner_usernames = input("Please Enter New Ownername: ")
-    owner_passwords = input("Please Enter New Passwords: ")
+    while True:
+        print("---NEW OWNER SIGN UP---")
+        owner_usernames = input("Please Enter New Ownername: ")
+        owner_passwords = input("Please Enter New Passwords: ")
 
-    new_owner = {
-        "Ownername" : owner_usernames,
-        "OwnerPasswords": owner_passwords
-    }
+        new_owner = {
+            "Ownername" : owner_usernames,
+            "OwnerPasswords": owner_passwords
+        }
     
-    with open(FILE_NAME, "r") as file:
-        current_list = json.load(file)
+        with open(FILE_NAME, "r") as file:
+            current_list = json.load(file)
     
-        current_list.append(new_owner)
+            current_list.append(new_owner)
     
-    with open(FILE_NAME, 'w') as file:
-        json.dump(current_list, file, indent = 4)
+        with open(FILE_NAME, 'w') as file:
+            json.dump(current_list, file, indent = 4)
 
-    print("Sign Up Successfull!")
-
+        print("Sign Up Successfull!")
+    
+        for i in current_list:
+            if i["Ownername"] == owner_usernames:
+                print("Username already used! Please try another usernames!")
 
 
 #this is for people who already has account
