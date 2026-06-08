@@ -18,7 +18,7 @@ import os
 #Tech stack
 #Django
 
-user_input = input("Do you have an account? (y/n): ")
+user_input = input("Do you have an account?\n 1.Yes\n 2.No\n 3.Exit\n Please Enter: ")
 
 FILE_NAME = "Owner_list.json"
 
@@ -54,3 +54,13 @@ def ownerSignIn():
     print("---OWNER SIGN IN---")
     user_usernames = input("Please Enter Ownername: ")
     owner_passwords = input("Please Enter Passwords: ")
+
+while True:
+    if user_input == "1":
+        ownerSignIn()
+    elif user_input == "2":
+        ownerSignUp()
+    elif user_input == "3":
+        break
+    else:
+        print("Invalid choice. Please try again.")
