@@ -16,5 +16,15 @@ print(book1.display())
 print(book2.display())
 print("======EXERCISE 1 END======")
 print("======EXERCISE 2======")
+class Vehicle:
+    def __init__(self, carType, carName):
+        self.carType = carType
+        self.carName = carName
 
-
+    def fuelTypeDetection(self):
+        #if ElectricCar => print Battery
+        #if NormalCar => print Gas
+        if self.carType == "1": #1 is for battery
+            return f"Car: {self.carName}, Car Type: {self.carType == "Battery"}"
+        
+car1 = input(Vehicle)
