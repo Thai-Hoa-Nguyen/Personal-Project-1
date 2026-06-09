@@ -17,14 +17,25 @@ print(book2.display())
 print("======EXERCISE 1 END======")
 print("======EXERCISE 2======")
 class Vehicle:
-    def __init__(self, carType, carName):
+    def __init__(self, carType):
         self.carType = carType
-        self.carName = carName
+    
+    def fuel_type(self):
+        return f"{self.carType}"
 
-    def fuelTypeDetection(self):
-        #if ElectricCar => print Battery
-        #if NormalCar => print Gas
-        if self.carType == "1": #1 is for battery
-            return f"Car: {self.carName}, Car Type: {self.carType == "Battery"}"
+class ElectricCar(Vehicle):
+        def fuel_type(self):
+            return f"Battery {self.carType}"
         
-car1 = input(Vehicle)
+class GasCar(Vehicle):
+        def fuel_type(self):
+            return f"Gas {self.carType}"
+
+car1 = ElectricCar("Tesla")
+car2 = GasCar("RAM")
+
+print(car1.fuel_type())
+print(car2.fuel_type())
+print("======EXERCISE 2 END======")
+print("======EXERCISE 3======")
+
