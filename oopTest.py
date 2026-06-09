@@ -38,4 +38,26 @@ print(car1.fuel_type())
 print(car2.fuel_type())
 print("======EXERCISE 2 END======")
 print("======EXERCISE 3======")
+class SmartPhone:
+    def __init__(self):
+        # Initialize battery level at 100 as per instructions
+        self.__battery_level = 100
 
+    # Method to decrease battery based on usage minutes
+    def use_phone(self, minutes):
+        self.__battery_level -= minutes
+        # Ensure battery doesn't drop below 0
+        if self.__battery_level < 0:
+            self.__battery_level = 0
+
+    # Getter method to safely access the private attribute
+    def get_battery_level(self):
+        return f"Battery Level: {self.__battery_level}%"
+
+# Testing the class
+phone = SmartPhone()
+phone.use_phone(15)
+print(phone.get_battery_level()) # Output: Battery Level: 85%
+print("======EXERCISE 3 END======")
+
+    
