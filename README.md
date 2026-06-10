@@ -1,2 +1,3 @@
-# Personal-Project-1
-Build from SCRATCH
+# Python Fundamentals
+- OOP
+- DSA
