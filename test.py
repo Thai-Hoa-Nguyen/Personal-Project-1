@@ -31,7 +31,8 @@ if not os.path.exists(FILE_NAME):
 #when owner sign up, if the usesname already exist, display error and ask owner to enter different username
 class OnwerManager:
     def __init__(self):
-        self.file_name() = "Owner_list.json"
+        pass
+       #self.file_name() = "Owner_list.json"
 
     def menuOwer():
         print("---NEW OWNER SIGN UP---")
@@ -46,7 +47,7 @@ class OnwerManager:
 
     def ownerSignUp():
     
-        ownerUsernameCheck = ownner_username
+        #ownerUsernameCheck = ownner_username
 
         with open(FILE_NAME, "r") as file:
             current_list = json.load(file) 
@@ -54,15 +55,15 @@ class OnwerManager:
         username_exist = False
     
         for i in current_list:
-            if i["Ownername"].lower() == owner_usernames.lower():
+            #if i["Ownername"].lower() == owner_usernames.lower():
                 print("Username already exist, please enter a different one!")
-            else:
+            #else:
             
 
         with open(FILE_NAME, "r") as file:
             current_list = json.load(file)
             
-            current_list.append(new_owner)
+            #current_list.append(new_owner)
     
         with open(FILE_NAME, 'w') as file:
             json.dump(current_list, file, indent = 4)
@@ -83,7 +84,8 @@ while True:
     if user_input == "1":
         ownerSignIn()
     elif user_input == "2":
-        ownerSignUp()
+        pass
+        #ownerSignUp()
     elif user_input == "3":
         break
     else:
