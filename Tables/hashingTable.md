@@ -1,5 +1,5 @@
 # Hasing Table
-![alt text](image/HasingTable.png)
+![alt text](../image/HasingTable.png)
 
 ## Probing vs Chaning
 **Probing (Open Addressing)** keeps everything inside the array. No extra memory is allowed. If a slot is taken, the item must wander around to find a different, empty slot somewhere else in the array.
