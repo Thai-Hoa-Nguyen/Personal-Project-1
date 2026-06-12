@@ -1,11 +1,11 @@
-
-
 class Account:
     def __init__(self,username, password, email, role):
-        self.username = username
-        self.password = password
-        self.email = email
-        self.role = role
+        ## private attributes
+        self.__username = username
+        self.__password = password
+        self.__email = email
+        self.__role = role
+
 
 class UserAccount(Account):
     pass
